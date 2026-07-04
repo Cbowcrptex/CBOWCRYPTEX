@@ -1,0 +1,104 @@
+name: Bug Report 🐛
+description: Report a bug or issue
+labels: ["bug"]
+assignees: []
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you for reporting a bug! Please provide as much detail as possible to help us fix it.
+
+  - type: textarea
+    id: description
+    attributes:
+      label: 📝 Bug Description
+      description: Clear and concise description of the bug
+      placeholder: "What's the bug? What should happen instead?"
+    validations:
+      required: true
+
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: 🔄 Steps to Reproduce
+      description: How can we reproduce this bug?
+      placeholder: |
+        1. First step
+        2. Second step
+        3. And so on...
+      value: |
+        1. 
+        2. 
+        3.
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: ✅ Expected Behavior
+      description: What should happen?
+      placeholder: "Describe the expected behavior"
+    validations:
+      required: true
+
+  - type: textarea
+    id: actual
+    attributes:
+      label: ❌ Actual Behavior
+      description: What actually happens?
+      placeholder: "Describe what actually happened"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: environment_os
+    attributes:
+      label: 💻 Operating System
+      options:
+        - macOS
+        - Windows
+        - Linux
+        - Other
+
+  - type: input
+    id: environment_node
+    attributes:
+      label: 📦 Node.js Version
+      description: Output of `node --version`
+      placeholder: "v18.0.0"
+
+  - type: input
+    id: environment_version
+    attributes:
+      label: 🎯 Project Version
+      description: Which version of Cbowcrptex are you using?
+      placeholder: "1.0.0 or 'main' branch"
+
+  - type: textarea
+    id: logs
+    attributes:
+      label: 📋 Logs / Error Messages
+      description: Include any relevant logs or error messages
+      render: shell
+      placeholder: "Paste error messages, stack traces, or logs here"
+
+  - type: textarea
+    id: context
+    attributes:
+      label: 🔗 Additional Context
+      description: Any other relevant information
+      placeholder: "Screenshots, code snippets, links, etc."
+
+  - type: checkboxes
+    id: checklist
+    attributes:
+      label: ✅ Verification
+      options:
+        - label: I've checked if this issue already exists
+          required: true
+        - label: I've reproduced this with the latest code
+          required: true
+        - label: I've included enough information to reproduce
+          required: true
